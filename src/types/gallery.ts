@@ -1,8 +1,8 @@
 // Gallery Item Types
 export interface GalleryImage {
   url: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
 }
 
 export interface GalleryItem {

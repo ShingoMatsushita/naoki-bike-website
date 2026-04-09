@@ -5,17 +5,7 @@ import Image from 'next/image';
 import { Link } from '@/components/common/Link';
 import { ContactCTA } from '@/components/common/ContactCTA';
 import { Lightbox } from '@/components/common/Lightbox';
-
-interface GalleryItem {
-  id: string;
-  title: string;
-  category: string;
-  description: string;
-  images: Array<{ url: string; width: number; height: number }>;
-  publishedAt: string;
-  createdAt: string;
-  updatedAt: string;
-}
+import type { GalleryItem } from '@/types/gallery';
 
 interface GalleryFilterProps {
   items: GalleryItem[];

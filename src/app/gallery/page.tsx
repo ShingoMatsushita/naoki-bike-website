@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import { GalleryFilter } from '@/components/features/GalleryFilter';
+import type { GalleryItem } from '@/types/gallery';
 
 export const metadata: Metadata = {
   title: '実績ギャラリー',
   description: '直樹バイクの修理・カスタム・販売車両の実績をご紹介します。',
 };
 
-const galleryItems = [
+const galleryItems: GalleryItem[] = [
     {
       id: '1',
       title: 'CB400SF カスタムペイント',

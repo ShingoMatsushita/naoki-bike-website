@@ -13,10 +13,10 @@ interface HeroSlideCardProps {
 
 const HeroSlideCard: React.FC<HeroSlideCardProps> = ({ slide, position }) => {
   const positionClasses = {
-    prev: '-translate-x-[80%] scale-95 opacity-50 z-0',
-    current: 'translate-x-0 scale-100 opacity-100 z-20',
-    next: 'translate-x-[80%] scale-95 opacity-50 z-0',
-    hidden: 'translate-x-0 scale-95 opacity-0 z-0',
+    prev: '-translate-x-full scale-95 opacity-50 z-0',
+    current: '-translate-x-1/2 scale-100 opacity-100 z-20',
+    next: 'translate-x-0 scale-95 opacity-50 z-0',
+    hidden: '-translate-x-1/2 scale-95 opacity-0 z-0',
   };
 
   const isVisible = position !== 'hidden';
@@ -25,7 +25,6 @@ const HeroSlideCard: React.FC<HeroSlideCardProps> = ({ slide, position }) => {
     <div
       className={`absolute left-1/2 top-0 w-full max-w-5xl h-full transition-all duration-500 ease-out ${positionClasses[position]}`}
       style={{
-        marginLeft: '-50%',
         pointerEvents: position === 'current' ? 'auto' : 'none',
       }}
     >
@@ -36,7 +35,8 @@ const HeroSlideCard: React.FC<HeroSlideCardProps> = ({ slide, position }) => {
             src={slide.image}
             alt={slide.title}
             fill
-            className="object-cover object-center"
+            className="object-cover"
+            style={{ objectPosition: 'center center' }}
             priority={position === 'current'}
             sizes="(max-width: 768px) 100vw, 1280px"
           />
@@ -85,7 +85,7 @@ interface NavigationButtonProps {
 const NavigationButton: React.FC<NavigationButtonProps> = ({ direction, onClick }) => {
   const isLeft = direction === 'left';
   const ariaLabel = isLeft ? '前へ' : '次へ';
-  const positionClass = isLeft ? 'left-4' : 'right-4';
+  const positionClass = isLeft ? 'left-2 md:left-4' : 'right-2 md:right-4';
 
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -97,11 +97,11 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({ direction, onClick 
     <button
       onClick={handleClick}
       type="button"
-      className={`absolute ${positionClass} top-1/2 -translate-y-1/2 z-40 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 transition-all duration-200 rounded-full shadow-lg cursor-pointer`}
+      className={`absolute ${positionClass} top-1/2 -translate-y-1/2 z-50 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-2 md:p-3 transition-all duration-200 rounded-full shadow-lg`}
       aria-label={ariaLabel}
     >
       <svg
-        className="w-6 h-6"
+        className="w-5 h-5 md:w-6 md:h-6"
         fill="none"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -159,11 +159,11 @@ export const HeroSection: React.FC = () => {
             />
           );
         })}
-      </div>
 
-      {/* Navigation Arrows */}
-      <NavigationButton direction="left" onClick={goToPrevious} />
-      <NavigationButton direction="right" onClick={goToNext} />
+        {/* Navigation Arrows */}
+        <NavigationButton direction="left" onClick={goToPrevious} />
+        <NavigationButton direction="right" onClick={goToNext} />
+      </div>
 
       {/* Dots Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-2">

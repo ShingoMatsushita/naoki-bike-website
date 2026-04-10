@@ -97,7 +97,7 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({ direction, onClick 
     <button
       onClick={handleClick}
       type="button"
-      className={`absolute ${positionClass} top-1/2 -translate-y-1/2 z-50 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-2 md:p-3 transition-all duration-200 rounded-full shadow-lg`}
+      className={`absolute ${positionClass} top-1/2 -translate-y-1/2 z-50 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-2 md:p-3 transition-all duration-200 rounded-full shadow-lg cursor-pointer`}
       aria-label={ariaLabel}
     >
       <svg
@@ -172,7 +172,7 @@ export const HeroSection: React.FC = () => {
             key={index}
             onClick={() => setCurrentIndex(index)}
             type="button"
-            className={`h-2 rounded-full transition-all duration-300 ${
+            className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
               index === currentIndex
                 ? 'bg-[--color-primary] w-8'
                 : 'bg-white/50 hover:bg-white/75 w-2'
@@ -181,30 +181,6 @@ export const HeroSection: React.FC = () => {
             aria-current={index === currentIndex ? 'true' : 'false'}
           />
         ))}
-      </div>
-
-      {/* Features Section */}
-      <div className="bg-gradient-to-b from-gray-50 to-white py-12">
-        <div className="container-custom">
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-3">
-            {[
-              { icon: '🔧', title: '修理・整備', description: '確かな技術で丁寧に対応' },
-              { icon: '⚡', title: 'カスタム', description: 'お客様だけの一台を' },
-              { icon: '🏍️', title: '中古車販売', description: '厳選されたバイクを' },
-            ].map((feature) => (
-              <div
-                key={feature.title}
-                className="bg-white border border-gray-200 p-6 transition-all duration-200 hover:shadow-lg hover:border-[--color-primary]"
-              >
-                <div className="mb-3 text-3xl">{feature.icon}</div>
-                <div className="mb-2 text-lg font-bold text-[--text-primary]">
-                  {feature.title}
-                </div>
-                <p className="text-sm text-[--text-secondary]">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

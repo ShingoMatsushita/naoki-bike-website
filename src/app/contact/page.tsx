@@ -252,7 +252,7 @@ export default function ContactPage() {
                     onChange={handleInputChange}
                     className={`w-full px-4 py-3 border ${
                       errors.category ? 'border-red-500' : 'border-gray-300'
-                    } focus:outline-none focus:border-[--color-primary]`}
+                    } focus:outline-none focus:border-[--color-primary] cursor-pointer`}
                   >
                     <option value="">選択してください</option>
                     <option value="修理依頼">修理依頼</option>
@@ -285,13 +285,13 @@ export default function ContactPage() {
 
                 {/* プライバシーポリシー */}
                 <div className="mb-6">
-                  <label className="flex items-start">
+                  <label className="flex items-start cursor-pointer">
                     <input
                       type="checkbox"
                       name="privacyAgreed"
                       checked={formData.privacyAgreed}
                       onChange={handleInputChange}
-                      className="mt-1 mr-2 w-4 h-4"
+                      className="mt-1 mr-2 w-4 h-4 cursor-pointer"
                     />
                     <span className="text-sm text-[--text-secondary]">
                       <span className="text-[--color-primary]">*</span> プライバシーポリシーに同意します

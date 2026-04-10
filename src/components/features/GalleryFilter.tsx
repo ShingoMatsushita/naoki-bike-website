@@ -35,20 +35,24 @@ export function GalleryFilter({ items }: GalleryFilterProps) {
   return (
     <>
       {/* Category Filter */}
-      <section className="py-6 bg-white border-b">
+      <section className="py-8 bg-gradient-to-b from-white to-gray-50 border-b-2 border-gray-200">
         <div className="container-custom">
-          <div className="flex flex-wrap gap-2 justify-center">
+          <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-5 py-2 border transition-all duration-200 text-sm font-bold ${
+                className={`group px-6 py-2.5 border-2 transition-all duration-300 text-sm font-bold relative overflow-hidden cursor-pointer ${
                   selectedCategory === category
-                    ? 'bg-[--color-primary] text-white border-[--color-primary]'
-                    : 'border-[--color-primary] text-[--color-primary] hover:bg-[--color-primary] hover:text-white'
+                    ? 'bg-[#cc0000] text-white border-[#cc0000] shadow-md'
+                    : 'border-[#cc0000] text-[#cc0000] hover:bg-[#cc0000] hover:text-white hover:shadow-md'
                 }`}
               >
-                {category}
+                <span className="relative z-10">{category}</span>
+                {/* Hover Background Effect */}
+                {selectedCategory !== category && (
+                  <div className="absolute inset-0 bg-[#cc0000] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-0"></div>
+                )}
               </button>
             ))}
           </div>
@@ -111,7 +115,7 @@ export function GalleryFilter({ items }: GalleryFilterProps) {
 
               {/* Load More Button */}
               <div className="mt-12 text-center">
-                <button className="px-8 py-3 bg-[--color-primary] text-white text-sm font-bold hover:bg-[--color-primary-dark] transition-all duration-200">
+                <button className="px-8 py-3 bg-[--color-primary] text-white text-sm font-bold hover:bg-[--color-primary-dark] transition-all duration-200 cursor-pointer">
                   さらに読み込む
                 </button>
               </div>

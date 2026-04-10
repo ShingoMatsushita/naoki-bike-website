@@ -132,17 +132,23 @@ export default function ServicesPage() {
                 {service.items.map((item) => (
                   <div
                     key={item.name}
-                    className="bg-white p-6 hover:shadow-md transition-shadow duration-200 border border-gray-100"
+                    className="group bg-white p-6 border-2 border-gray-100 hover:border-[--color-primary] hover:shadow-lg transition-all duration-300 relative overflow-hidden"
                   >
-                    <div className="mb-2 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
-                      <h3 className="text-base font-bold text-[--text-primary]">
-                        {item.name}
-                      </h3>
-                      <span className="shrink-0 text-base font-bold text-[--color-primary] sm:text-right">
-                        {item.price}
-                      </span>
+                    {/* Hover Background Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-[--color-primary]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                    <div className="relative z-10">
+                      <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                        <h3 className="text-base font-bold text-[--text-primary] flex items-center gap-2">
+                          <span className="text-[--color-primary] text-lg group-hover:scale-110 transition-transform duration-300">✓</span>
+                          {item.name}
+                        </h3>
+                        <span className="shrink-0 text-base font-bold text-[--color-primary] bg-[--color-primary]/10 px-3 py-1 rounded sm:text-right">
+                          {item.price}
+                        </span>
+                      </div>
+                      <p className="text-sm text-[--text-secondary] leading-relaxed">{item.description}</p>
                     </div>
-                    <p className="text-sm text-[--text-secondary]">{item.description}</p>
                   </div>
                 ))}
               </div>

@@ -64,65 +64,122 @@ export default function AboutPage() {
               />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-sm font-bold text-[--color-primary] mb-2">店舗名</h3>
-                  <p className="text-[--text-primary] text-base">直樹バイク</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-white to-gray-50 border-2 border-[--color-primary]/20 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:border-[--color-primary]">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-2xl">🏢</span>
+                  <h3 className="text-sm font-bold text-[--color-primary]">店舗名</h3>
                 </div>
-                <div>
-                  <h3 className="text-sm font-bold text-[--color-primary] mb-2">代表者</h3>
-                  <p className="text-[--text-primary] text-base">代表取締役 直樹</p>
-                </div>
-                <div>
-                  <h3 className="text-sm font-bold text-[--color-primary] mb-2">設立</h3>
-                  <p className="text-[--text-primary] text-base">2010年4月</p>
-                </div>
-                <div>
-                  <h3 className="text-sm font-bold text-[--color-primary] mb-2">従業員数</h3>
-                  <p className="text-[--text-primary] text-base">8名（整備士5名、営業3名）</p>
-                </div>
-                <div>
-                  <h3 className="text-sm font-bold text-[--color-primary] mb-2">事業内容</h3>
-                  <ul className="text-[--text-secondary] text-sm space-y-1">
-                    <li>• バイク修理・整備（国産車・輸入車対応）</li>
-                    <li>• カスタム・チューニング</li>
-                    <li>• 中古バイク販売（厳選車両のみ取扱）</li>
-                    <li>• バイク買取・下取り</li>
-                    <li>• 車検代行サービス</li>
-                    <li>• パーツ販売・取り付け</li>
-                  </ul>
-                </div>
+                <p className="text-[--text-primary] text-base font-bold">直樹バイク</p>
               </div>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-sm font-bold text-[--color-primary] mb-2">営業時間</h3>
-                  <p className="text-[--text-primary] text-base">9:00 - 18:00</p>
-                  <p className="text-[--text-secondary] text-sm mt-1">※作業中のお預かりは17:00まで</p>
+
+              <div className="bg-gradient-to-br from-white to-gray-50 border-2 border-[--color-primary]/20 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:border-[--color-primary]">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-2xl">👤</span>
+                  <h3 className="text-sm font-bold text-[--color-primary]">代表者</h3>
                 </div>
-                <div>
-                  <h3 className="text-sm font-bold text-[--color-primary] mb-2">定休日</h3>
-                  <p className="text-[--text-primary] text-base">水曜日、第2・第4日曜日</p>
-                  <p className="text-[--text-secondary] text-sm mt-1">※祝日は営業しております</p>
+                <p className="text-[--text-primary] text-base">代表取締役 直樹</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-white to-gray-50 border-2 border-[--color-primary]/20 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:border-[--color-primary]">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-2xl">📅</span>
+                  <h3 className="text-sm font-bold text-[--color-primary]">設立</h3>
                 </div>
-                <div>
-                  <h3 className="text-sm font-bold text-[--color-primary] mb-2">電話番号</h3>
-                  <p className="text-[--text-primary] text-base font-bold">000-0000-0000</p>
-                  <p className="text-[--text-secondary] text-sm mt-1">お急ぎの方はお電話でお問い合わせください</p>
+                <p className="text-[--text-primary] text-base">2010年4月</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-white to-gray-50 border-2 border-[--color-primary]/20 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:border-[--color-primary]">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-2xl">👥</span>
+                  <h3 className="text-sm font-bold text-[--color-primary]">従業員数</h3>
                 </div>
-                <div>
-                  <h3 className="text-sm font-bold text-[--color-primary] mb-2">FAX</h3>
-                  <p className="text-[--text-primary] text-base">000-0000-0001</p>
+                <p className="text-[--text-primary] text-base">8名<br/><span className="text-sm text-[--text-secondary]">（整備士5名、営業3名）</span></p>
+              </div>
+
+              <div className="bg-gradient-to-br from-white to-gray-50 border-2 border-[--color-primary]/20 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:border-[--color-primary]">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-2xl">🕐</span>
+                  <h3 className="text-sm font-bold text-[--color-primary]">営業時間</h3>
                 </div>
-                <div>
-                  <h3 className="text-sm font-bold text-[--color-primary] mb-2">メール</h3>
-                  <p className="text-[--text-primary] text-sm">info@naoki-bike.com</p>
-                  <p className="text-[--text-secondary] text-sm mt-1">24時間受付（返信は営業時間内）</p>
+                <p className="text-[--text-primary] text-base font-bold">9:00 - 18:00</p>
+                <p className="text-[--text-secondary] text-sm mt-2">※作業中のお預かりは17:00まで</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-white to-gray-50 border-2 border-[--color-primary]/20 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:border-[--color-primary]">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-2xl">📅</span>
+                  <h3 className="text-sm font-bold text-[--color-primary]">定休日</h3>
                 </div>
-                <div>
-                  <h3 className="text-sm font-bold text-[--color-primary] mb-2">駐車場</h3>
-                  <p className="text-[--text-primary] text-base">店舗前5台、バイク駐輪スペース15台</p>
+                <p className="text-[--text-primary] text-base">水曜日、第2・第4日曜日</p>
+                <p className="text-[--text-secondary] text-sm mt-2">※祝日は営業しております</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-white to-gray-50 border-2 border-[--color-primary]/20 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:border-[--color-primary]">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-2xl">📞</span>
+                  <h3 className="text-sm font-bold text-[--color-primary]">電話番号</h3>
                 </div>
+                <p className="text-[--text-primary] text-lg font-bold">000-0000-0000</p>
+                <p className="text-[--text-secondary] text-sm mt-2">お急ぎの方はお電話でお問い合わせください</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-white to-gray-50 border-2 border-[--color-primary]/20 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:border-[--color-primary]">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-2xl">✉️</span>
+                  <h3 className="text-sm font-bold text-[--color-primary]">メール</h3>
+                </div>
+                <p className="text-[--text-primary] text-sm break-all">info@naoki-bike.com</p>
+                <p className="text-[--text-secondary] text-sm mt-2">24時間受付（返信は営業時間内）</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-white to-gray-50 border-2 border-[--color-primary]/20 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:border-[--color-primary]">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-2xl">📠</span>
+                  <h3 className="text-sm font-bold text-[--color-primary]">FAX</h3>
+                </div>
+                <p className="text-[--text-primary] text-base">000-0000-0001</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-white to-gray-50 border-2 border-[--color-primary]/20 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:border-[--color-primary]">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-2xl">🅿️</span>
+                  <h3 className="text-sm font-bold text-[--color-primary]">駐車場</h3>
+                </div>
+                <p className="text-[--text-primary] text-base">店舗前5台<br/>バイク駐輪スペース15台</p>
+              </div>
+
+              <div className="md:col-span-2 bg-gradient-to-br from-white to-gray-50 border-2 border-[--color-primary]/20 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:border-[--color-primary]">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-2xl">🔧</span>
+                  <h3 className="text-sm font-bold text-[--color-primary]">事業内容</h3>
+                </div>
+                <ul className="text-[--text-secondary] text-sm space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[--color-primary] mt-1">✓</span>
+                    <span>バイク修理・整備（国産車・輸入車対応）</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[--color-primary] mt-1">✓</span>
+                    <span>カスタム・チューニング</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[--color-primary] mt-1">✓</span>
+                    <span>中古バイク販売（厳選車両のみ取扱）</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[--color-primary] mt-1">✓</span>
+                    <span>バイク買取・下取り</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[--color-primary] mt-1">✓</span>
+                    <span>車検代行サービス</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[--color-primary] mt-1">✓</span>
+                    <span>パーツ販売・取り付け</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
